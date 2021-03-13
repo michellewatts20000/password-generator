@@ -33,13 +33,15 @@ function generatePassword() {
     var uNumbers = window.confirm("Click OK if you want numbers in your password.");
     var uLowerCase = window.confirm("Click OK if you want lowercase letters in your password.");
     var uUpperCase = window.confirm("Click OK if you want uppercase letters in your password.");
+  } 
+  
+ if (!uSpecial && !uNumbers && !uLowerCase && !uUpperCase) {
+    window.alert("You must select at least one character type!");
+    return "Make sure you select at least one character type"
+
   }
 
-  if (!uSpecial && !uNumbers && !uLowerCase && !uUpperCase) {
-    window.alert("You must select at least one character type!");
-    return;
-
-  } else if (!uSpecial && !uNumbers && uLowerCase && uUpperCase) {
+  if (!uSpecial && !uNumbers && uLowerCase && uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * allCharacters.length);
@@ -96,7 +98,7 @@ function generatePassword() {
     }
     return newPassword
 
-  }  else if (!uSpecial && uNumbers && !uLowerCase && uUpperCase) {
+  } else if (!uSpecial && uNumbers && !uLowerCase && uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * numbersUpperCase.length);
@@ -116,8 +118,7 @@ function generatePassword() {
     }
     return newPassword
 
-  } 
-  else if (uSpecial && uNumbers && !uLowerCase && !uUpperCase) {
+  } else if (uSpecial && uNumbers && !uLowerCase && !uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * sCharactersNumbers.length);
@@ -127,9 +128,7 @@ function generatePassword() {
     }
     return newPassword
 
-  }
-
-  else if (uSpecial && !uNumbers && uLowerCase && !uUpperCase) {
+  } else if (uSpecial && !uNumbers && uLowerCase && !uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * sCharactersLowerCase.length);
@@ -139,9 +138,7 @@ function generatePassword() {
     }
     return newPassword
 
-  }
-  
-  else if (!uSpecial && uNumbers && uLowerCase && !uUpperCase) {
+  } else if (!uSpecial && uNumbers && uLowerCase && !uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * numbersLowerCase.length);
@@ -151,11 +148,7 @@ function generatePassword() {
     }
     return newPassword
 
-  }
-  
-  
-  
-  else if (!uSpecial && uNumbers && uLowerCase && uUpperCase) {
+  } else if (!uSpecial && uNumbers && uLowerCase && uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * numbersAllCharacters.length);
@@ -165,9 +158,7 @@ function generatePassword() {
     }
     return newPassword
 
-  }
-
-  else if (uSpecial && !uNumbers && uLowerCase && uUpperCase) {
+  } else if (uSpecial && !uNumbers && uLowerCase && uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * sCharactersAllCharacters.length);
@@ -177,9 +168,7 @@ function generatePassword() {
     }
     return newPassword
 
-  }
-
-  else if (uSpecial && uNumbers && !uLowerCase && uUpperCase) {
+  } else if (uSpecial && uNumbers && !uLowerCase && uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * numspecupper.length);
@@ -189,10 +178,7 @@ function generatePassword() {
     }
     return newPassword
 
-  }
-
-
-  else if (uSpecial && uNumbers && uLowerCase && !uUpperCase) {
+  } else if (uSpecial && uNumbers && uLowerCase && !uUpperCase) {
 
     for (i = 0; i < numberCharacters; i++) {
       let character = Math.floor(Math.random() * numspeclower.length);
@@ -203,7 +189,7 @@ function generatePassword() {
     return newPassword
 
   }
-  
+
 
 }
 
