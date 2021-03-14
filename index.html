@@ -1,34 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="./assets/style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+
+     
+      <div class="card-body">
+        <h5>Enter the number of characters you want in your password</h5>
+        <div class="form-row">
+        
+           
+            <input type="email" class="form-control complexity" id="inputEmail4" placeholder="Choose a number between 8 and 128">
+          </div>
+   
+<br>
+
+   
+    
+        <h5>Select the types of characters you would like in your password</h5>
+
+      
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input type="checkbox" class="custom-control-input cb_uppercase" id="customCheck1">
+          <label class="custom-control-label" for="customCheck1">Uppercase</label>
         </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input type="checkbox" class="custom-control-input cb_lowercase" id="customCheck2">
+          <label class="custom-control-label" for="customCheck2">Lowercase</label>
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input type="checkbox" class="custom-control-input cb_numeric" id="customCheck3">
+          <label class="custom-control-label" for="customCheck3">Numbers</label>
         </div>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input type="checkbox" class="custom-control-input cb_special" id="customCheck4">
+          <label class="custom-control-label" for="customCheck4">Special</label>
+        </div>
+
+   <br>
+        
+
+        <textarea readonly id="password" class="showit" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
+        <button onclick="copyPassword()" class="btn2"> Copy to Clipboard </button>
+        <button value="Reload Page" onClick="window.location.reload();"  class="btn2"> Refresh </button>
+     
       </div>
     </div>
-    <script src="./assets/script.js"></script>
-  </body>
+  </div>
+
+  <script src="./assets/script.js"></script>
+</body>
+
 </html>
