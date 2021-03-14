@@ -10,7 +10,7 @@
   <title>Password Generator</title>
   <link rel="stylesheet" href="./assets/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,51 +20,53 @@
     </header>
     <div class="card">
 
-     
+
       <div class="card-body">
-        <h5>Enter the number of characters you want in your password</h5>
+        <h5 class="required">Enter the number of characters you want in your password</h5>
         <div class="form-row">
-        
-           
-            <input type="email" class="form-control complexity" id="inputEmail4" placeholder="Choose a number between 8 and 128">
-          </div>
-   
-<br>
 
-   
-    
-        <h5>Select the types of characters you would like in your password</h5>
 
-      
-        <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input cb_uppercase" id="customCheck1">
-          <label class="custom-control-label" for="customCheck1">Uppercase</label>
+          <input type="email" class="form-control numberCharacters" id="inputEmail4"
+            placeholder="Choose a number between 8 and 128">
         </div>
+
+        <br>
+
+
+
+        <h5 class="required">Select the types of characters you would like in your password</h5>
+
         <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input cb_lowercase" id="customCheck2">
+          <input type="checkbox" class="custom-control-input user_lowercase" id="customCheck2">
           <label class="custom-control-label" for="customCheck2">Lowercase</label>
         </div>
 
         <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input cb_numeric" id="customCheck3">
+          <input type="checkbox" class="custom-control-input user_uppercase" id="customCheck1">
+          <label class="custom-control-label" for="customCheck1">Uppercase</label>
+        </div>
+     
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input type="checkbox" class="custom-control-input user_numeric" id="customCheck3">
           <label class="custom-control-label" for="customCheck3">Numbers</label>
         </div>
         <div class="custom-control custom-checkbox custom-control-inline">
-          <input type="checkbox" class="custom-control-input cb_special" id="customCheck4">
+          <input type="checkbox" class="custom-control-input user_special" id="customCheck4">
           <label class="custom-control-label" for="customCheck4">Special</label>
         </div>
 
-   <br>
-        
+        <br>
 
-        <textarea readonly id="password" class="showit" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+
+        <textarea readonly id="password" class="showit" placeholder="Your Secure Password"
+          aria-label="Generated Password"></textarea>
       </div>
 
       <div class="card-footer">
         <button id="generate" class="btn">Generate Password</button>
         <button onclick="copyPassword()" class="btn2"> Copy to Clipboard </button>
-        <button value="Reload Page" onClick="window.location.reload();"  class="btn2"> Refresh </button>
-     
+        <button value="Reload Page" onClick="window.location.reload();" class="btn2"> Refresh </button>
+
       </div>
     </div>
   </div>

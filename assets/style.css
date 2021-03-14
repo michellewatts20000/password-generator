@@ -15,7 +15,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color:  hsl(360, 91%, 36%);
+  background-color: hsl(360, 91%, 36%);
 }
 
 .wrapper {
@@ -59,7 +59,7 @@ header {
 
 .card-footer {
   text-align: center;
-  border-top:none;
+  border-top: none;
 }
 
 .card-footer::before {
@@ -80,8 +80,7 @@ header {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
@@ -98,8 +97,7 @@ header {
   width: 50%;
   background-color: rgb(8, 100, 175);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
@@ -110,9 +108,19 @@ header {
   cursor: pointer;
 }
 
+.btn2:hover, .btn:hover {
+
+  color:#c0c7cf;
+}
+
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
+}
+
+.required:after {
+  content:" *";
+  color: hsl(360, 91%, 36%);
 }
 
 .float-right {
@@ -141,8 +149,9 @@ button[disabled] {
 }
 
 h1 {
-  font-family: 'Roboto Mono', monospace;
-  color:white;
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 2px;
+  color: white;
 }
 
 h5 {
@@ -151,14 +160,16 @@ h5 {
 }
 
 @media (max-width: 690px) {
-  .btn, .btn2 {
+
+  .btn,
+  .btn2 {
     font-size: 1.2rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
     width: 100%;
   }
 
-  
+
 
   #password {
     font-size: 1rem;
@@ -166,7 +177,9 @@ h5 {
 }
 
 @media (max-width: 500px) {
-  .btn, .btn2 {
+
+  .btn,
+  .btn2 {
     font-size: 1.0rem;
   }
 }
