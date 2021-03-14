@@ -33,20 +33,20 @@ function generatePassword() {
   // alert user that they haven't specified enough characters and return them out of the function so they have to start again
   if (numberCharacters < 8) {
     window.alert("You haven't specified enough characters, please choose a number between 8 and 128");
-    return
+    return;
 
 
   } 
   // alert user that they have asked for too many characters and return them out of the function so they have to start again
   else if (numberCharacters > 128) {
     window.alert("You have too many characters, please choose a number between 8 and 128.");
-    return
+    return;
 
   } 
    // alert user that they cannot leave the field blank and return them out of the function so they have to start again
   else if (numberCharacters === "") {
     window.alert("You have left the field blank you need to enter a number between 8 and 128");
-    return
+    return;
 
   } 
    // ask the user what types of characters they want their password to contain
@@ -61,7 +61,7 @@ function generatePassword() {
 // alert user that they need to select at least one character type and return them out of the function so they have to start again
   if (!uSpecial && !uNumbers && !uLowerCase && !uUpperCase) {
     window.alert("You must select at least one character type!");
-    return
+    return;
 
   } 
   // use logical comparison operators and conditional statements to run the right loop for the user
@@ -126,7 +126,7 @@ function generatePassword() {
 
 
     }
-    return newPassword
+
 
   } else if (!uSpecial && uNumbers && !uLowerCase && uUpperCase) {
 
