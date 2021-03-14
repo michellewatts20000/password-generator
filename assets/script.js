@@ -1,6 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", generatePassword);
+
+
 function generatePassword() {
   // Store the length the user wants the password to be
   var numberCharacters = document.querySelector(".numberCharacters").value;
@@ -55,5 +59,3 @@ function copyPassword() {
 }
 
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
