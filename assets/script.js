@@ -23,24 +23,24 @@ function generatePassword() {
 
   // if no checkboxes checked by user show alert
   if (!yesSpecialChars && !yesNumbers && !yesLowercase && !yesUppercase) {
-
     alert("Please make at least one character type selection.")
     return;
   }
 
  // library of all the options
-  var specialChars = '!@#$%^&*()<>={}[],.?~`/;:"-_+';
-  var numberChars = '0123456789';
-  var lowerCaseChars = 'abcdefghijklmnopqrstuvwxyz';
-  var upperCaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var special = '!@#$%^&*()<>={}[],.?~`/;:"-_+';
+  var numbers = '0123456789';
+  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+  var upperCase = lowerCase.toUpperCase();
+ 
 
-  // create unique values string based on what checkboxes were checked, found this solution here: https://github.com/zsadov1/Password-Generator-3/blob/master/JS/script.js
-  let userChoice = `${yesUppercase ? upperCaseChars : ''}${yesLowercase ? lowerCaseChars : ''}${yesSpecialChars ? specialChars: ''}${yesNumbers ? numberChars : ''}`;
+  // creates unique string based on what checkboxes were checked
+  let userChoice = `${yesUppercase ? upperCase : ''}${yesLowercase ? lowerCase : ''}${yesSpecialChars ? special: ''}${yesNumbers ? numbers : ''}`;
 
   // an empty string to store the new password
   var password = '';
 
-  // Create for loop to choose password characters
+  // Create for loop to choose password random characters
   for (var i = 0; i < numberCharacters; i++) {
     password = password + userChoice.charAt(Math.floor(Math.random() * Math.floor(userChoice.length - 1)));
   }
@@ -49,13 +49,12 @@ function generatePassword() {
   document.querySelector(".showit").value = password;
 }
 
-
-// function triggered by button click - to copy password
+// function triggered by "copy" button click
 function copyPassword() {
   var password = document.querySelector(".showit");
   password.select();
   document.execCommand("copy");
-  alert('password copied!')
+  alert('Password copied - paste it somewhere safe!')
 }
 
 
